@@ -1,9 +1,25 @@
-plugins {
-  // See https://jmfayard.github.io/refreshVersions
-  id("de.fayard.refreshVersions") version "0.50.2"
+rootProject.name = "klibopenai-root"
+
+pluginManagement {
+  repositories {
+    mavenCentral()
+    gradlePluginPortal()
+    maven("https://central.sonatype.com/repository/maven-snapshots/")
+  }
 }
 
-rootProject.name = "klibopenai-root"
+dependencyResolutionManagement {
+  @Suppress("UnstableApiUsage")
+  repositories {
+    mavenCentral()
+    maven("https://central.sonatype.com/repository/maven-snapshots/")
+  }
+}
+
+plugins {
+  // See https://jmfayard.github.io/refreshVersions
+  id("de.fayard.refreshVersions") version "0.60.6"
+}
 
 include(":library")
 project(":library").name = "klibopenai"

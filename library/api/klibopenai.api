@@ -1,0 +1,460 @@
+public final class org/jraf/klibopenai/VersionKt {
+	public static final field VERSION Ljava/lang/String;
+}
+
+public final class org/jraf/klibopenai/client/OpenAIClient {
+	public fun <init> (Lorg/jraf/klibopenai/client/configuration/ClientConfiguration;)V
+	public final fun addMessageToThread (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun chatCompletion (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun createThread (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun runThread (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class org/jraf/klibopenai/client/OpenAIClient$Message {
+	public abstract fun getContent ()Ljava/lang/String;
+}
+
+public final class org/jraf/klibopenai/client/OpenAIClient$Message$Assistant : org/jraf/klibopenai/client/OpenAIClient$Message {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lorg/jraf/klibopenai/client/OpenAIClient$Message$Assistant;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/client/OpenAIClient$Message$Assistant;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/client/OpenAIClient$Message$Assistant;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getContent ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class org/jraf/klibopenai/client/OpenAIClient$Message$User : org/jraf/klibopenai/client/OpenAIClient$Message {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lorg/jraf/klibopenai/client/OpenAIClient$Message$User;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/client/OpenAIClient$Message$User;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/client/OpenAIClient$Message$User;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getContent ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class org/jraf/klibopenai/client/OpenAIService {
+	public static final field Companion Lorg/jraf/klibopenai/client/OpenAIService$Companion;
+	public fun <init> (Lio/ktor/client/HttpClient;)V
+	public final fun chatCompletions (Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun threadsCreate (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun threadsMessagesCreate (Ljava/lang/String;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun threadsMessagesList (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun threadsRunsCreate (Ljava/lang/String;Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun threadsRunsRetrieve (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class org/jraf/klibopenai/client/OpenAIService$Companion {
+}
+
+public final class org/jraf/klibopenai/client/configuration/ClientConfiguration {
+	public fun <init> (Ljava/lang/String;Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;)V
+	public synthetic fun <init> (Ljava/lang/String;Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;
+	public final fun copy (Ljava/lang/String;Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;)Lorg/jraf/klibopenai/client/configuration/ClientConfiguration;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/client/configuration/ClientConfiguration;Ljava/lang/String;Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;ILjava/lang/Object;)Lorg/jraf/klibopenai/client/configuration/ClientConfiguration;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthBearerToken ()Ljava/lang/String;
+	public final fun getHttpConfiguration ()Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class org/jraf/klibopenai/client/configuration/HttpConfiguration {
+	public fun <init> ()V
+	public fun <init> (Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;Lorg/jraf/klibopenai/client/configuration/HttpProxy;)V
+	public synthetic fun <init> (Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;Lorg/jraf/klibopenai/client/configuration/HttpProxy;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public final fun component2 ()Lorg/jraf/klibopenai/client/configuration/HttpProxy;
+	public final fun copy (Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;Lorg/jraf/klibopenai/client/configuration/HttpProxy;)Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;Lorg/jraf/klibopenai/client/configuration/HttpProxy;ILjava/lang/Object;)Lorg/jraf/klibopenai/client/configuration/HttpConfiguration;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHttpProxy ()Lorg/jraf/klibopenai/client/configuration/HttpProxy;
+	public final fun getLoggingLevel ()Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class org/jraf/klibopenai/client/configuration/HttpLoggingLevel : java/lang/Enum {
+	public static final field ALL Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public static final field BODY Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public static final field HEADERS Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public static final field INFO Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public static final field NONE Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+	public static fun values ()[Lorg/jraf/klibopenai/client/configuration/HttpLoggingLevel;
+}
+
+public final class org/jraf/klibopenai/client/configuration/HttpProxy {
+	public fun <init> (Ljava/lang/String;I)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun copy (Ljava/lang/String;I)Lorg/jraf/klibopenai/client/configuration/HttpProxy;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/client/configuration/HttpProxy;Ljava/lang/String;IILjava/lang/Object;)Lorg/jraf/klibopenai/client/configuration/HttpProxy;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHost ()Ljava/lang/String;
+	public final fun getPort ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage {
+	public static final field Companion Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage$Companion;
+	public static final field ROLE_ASSISTANT Ljava/lang/String;
+	public static final field ROLE_SYSTEM Ljava/lang/String;
+	public static final field ROLE_USER Ljava/lang/String;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Ljava/lang/String;
+	public final fun getRole ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest {
+	public static final field Companion Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessages ()Ljava/util/List;
+	public final fun getModel ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsRequest$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse {
+	public static final field Companion Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/util/List;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChoices ()Ljava/util/List;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChatCompletionsResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChoice {
+	public static final field Companion Lorg/jraf/klibopenai/json/chat/completions/JsonChoice$Companion;
+	public static final field FINISH_REASON_CONTENT_FILTER Ljava/lang/String;
+	public static final field FINISH_REASON_LENGTH Ljava/lang/String;
+	public static final field FINISH_REASON_STOP Ljava/lang/String;
+	public fun <init> (Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;Ljava/lang/String;)V
+	public final fun component1 ()Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;Ljava/lang/String;)Lorg/jraf/klibopenai/json/chat/completions/JsonChoice;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/chat/completions/JsonChoice;Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/chat/completions/JsonChoice;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFinish_reason ()Ljava/lang/String;
+	public final fun getMessage ()Lorg/jraf/klibopenai/json/chat/completions/JsonChatCompletionsMessage;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/chat/completions/JsonChoice$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/chat/completions/JsonChoice$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/chat/completions/JsonChoice;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/chat/completions/JsonChoice;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/chat/completions/JsonChoice$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsCreateResponse {
+	public static final field Companion Lorg/jraf/klibopenai/json/threads/JsonThreadsCreateResponse$Companion;
+	public fun <init> (Ljava/lang/String;J)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()J
+	public final fun copy (Ljava/lang/String;J)Lorg/jraf/klibopenai/json/threads/JsonThreadsCreateResponse;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/threads/JsonThreadsCreateResponse;Ljava/lang/String;JILjava/lang/Object;)Lorg/jraf/klibopenai/json/threads/JsonThreadsCreateResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCreated_at ()J
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/threads/JsonThreadsCreateResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/threads/JsonThreadsCreateResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/threads/JsonThreadsCreateResponse;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/threads/JsonThreadsCreateResponse;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsCreateResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessage {
+	public static final field Companion Lorg/jraf/klibopenai/json/threads/JsonThreadsMessage$Companion;
+	public static final field ROLE_ASSISTANT Ljava/lang/String;
+	public static final field ROLE_SYSTEM Ljava/lang/String;
+	public static final field ROLE_USER Ljava/lang/String;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessage;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/threads/JsonThreadsMessage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Ljava/util/List;
+	public final fun getFile_ids ()Ljava/util/List;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getRole ()Ljava/lang/String;
+	public final fun getThread_id ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/threads/JsonThreadsMessage$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/threads/JsonThreadsMessage$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessage;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessage;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessage$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessageContent {
+	public static final field Companion Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContent$Companion;
+	public fun <init> (Ljava/lang/String;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;
+	public final fun copy (Ljava/lang/String;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContent;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContent;Ljava/lang/String;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;
+	public final fun getType ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/threads/JsonThreadsMessageContent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContent;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContent;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessageContent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessageContentText {
+	public static final field Companion Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/threads/JsonThreadsMessageContentText$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessageContentText;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessageContentText$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest {
+	public static final field Companion Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Ljava/lang/String;
+	public final fun getRole ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsMessagesCreateRequest$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsRun {
+	public static final field Companion Lorg/jraf/klibopenai/json/threads/JsonThreadsRun$Companion;
+	public static final field STATUS_CANCELLED Ljava/lang/String;
+	public static final field STATUS_CANCELLING Ljava/lang/String;
+	public static final field STATUS_COMPLETED Ljava/lang/String;
+	public static final field STATUS_EXPIRED Ljava/lang/String;
+	public static final field STATUS_FAILED Ljava/lang/String;
+	public static final field STATUS_IN_PROGRESS Ljava/lang/String;
+	public static final field STATUS_QUEUED Ljava/lang/String;
+	public static final field STATUS_REQUIRES_ACTION Ljava/lang/String;
+	public fun <init> (Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component2 ()J
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()J
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun component7 ()Ljava/lang/Long;
+	public final fun component8 ()Ljava/lang/Long;
+	public final fun component9 ()Ljava/lang/Long;
+	public final fun copy (Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;)Lorg/jraf/klibopenai/json/threads/JsonThreadsRun;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/threads/JsonThreadsRun;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/threads/JsonThreadsRun;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCancelled_at ()Ljava/lang/Long;
+	public final fun getCompleted_at ()Ljava/lang/Long;
+	public final fun getCreated_at ()J
+	public final fun getExpires_at ()Ljava/lang/Long;
+	public final fun getFailed_at ()Ljava/lang/Long;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLast_error ()Ljava/lang/String;
+	public final fun getStarted_at ()J
+	public final fun getStatus ()Ljava/lang/String;
+	public final fun getThread_id ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/threads/JsonThreadsRun$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/threads/JsonThreadsRun$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/threads/JsonThreadsRun;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/threads/JsonThreadsRun;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsRun$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest {
+	public static final field Companion Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest;
+	public static synthetic fun copy$default (Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest;Ljava/lang/String;ILjava/lang/Object;)Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAssistant_id ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class org/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lorg/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class org/jraf/klibopenai/json/threads/JsonThreadsRunsCreateRequest$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
