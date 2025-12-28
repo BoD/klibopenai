@@ -3,22 +3,22 @@
   <groupId>org.jraf.klibopenai</groupId>
   <artifactId>kdoc</artifactId>
   <versioning>
-    <lastUpdated>20251228170705</lastUpdated>
+    <lastUpdated>20251228175806</lastUpdated>
     <snapshot>
-      <timestamp>20251228.170705</timestamp>
+      <timestamp>20251228.175806</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
-        <classifier>javadoc</classifier>
-        <extension>jar</extension>
-        <value>1.0.1-20251228.170705-1</value>
-        <updated>20251228170705</updated>
+        <extension>pom</extension>
+        <value>1.0.1-20251228.175806-1</value>
+        <updated>20251228175806</updated>
       </snapshotVersion>
       <snapshotVersion>
-        <extension>pom</extension>
-        <value>1.0.1-20251228.170705-1</value>
-        <updated>20251228170705</updated>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>1.0.1-20251228.175806-1</value>
+        <updated>20251228175806</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
