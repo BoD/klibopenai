@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":klibopenai/commonMain":[],":klibopenai/jvmMain":[":klibopenai/commonMain"]}'

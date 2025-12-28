@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:klibopenai
+org.jraf.klibopenai
+org.jraf.klibopenai.client
+org.jraf.klibopenai.client.configuration
+org.jraf.klibopenai.json.chat.completions
+org.jraf.klibopenai.json.threads
