@@ -1,0 +1,158 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../klibopenai/1.0.2-SNAPSHOT/klibopenai-1.0.2-SNAPSHOT.module",
+    "group": "org.jraf.klibopenai",
+    "module": "klibopenai",
+    "version": "1.0.2-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "klibopenai-jvm-1.0.2-SNAPSHOT.jar",
+          "url": "klibopenai-jvm-1.0.2-SNAPSHOT.jar",
+          "size": 110988,
+          "sha512": "2a60ade002449958109762f70cb82e739072b00922f61ae5af8392686416c9b8b9fe3c0986aa77c375b6d5232f2c9d654c975dd547995d8ea7115c845ea9e886",
+          "sha256": "6809af1c3d51c9d9aca0c6795ccb92952cfa2008b5dbaa79c69da8d5d54d4cc9",
+          "sha1": "775a7d509db5d4c80a73baeee278f35a7906440d",
+          "md5": "6d5a77fae206fd2a736c163b11625870"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-jdk9",
+          "version": {
+            "requires": "1.10.2"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-okhttp",
+          "version": {
+            "requires": "3.3.3"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-core",
+          "version": {
+            "requires": "3.3.3"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-content-negotiation",
+          "version": {
+            "requires": "3.3.3"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-auth",
+          "version": {
+            "requires": "3.3.3"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-logging",
+          "version": {
+            "requires": "3.3.3"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-serialization-kotlinx-json",
+          "version": {
+            "requires": "3.3.3"
+          }
+        },
+        {
+          "group": "org.jraf.klibnanolog",
+          "module": "klibnanolog",
+          "version": {
+            "requires": "1.3.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "klibopenai-jvm-1.0.2-SNAPSHOT.jar",
+          "url": "klibopenai-jvm-1.0.2-SNAPSHOT.jar",
+          "size": 110988,
+          "sha512": "2a60ade002449958109762f70cb82e739072b00922f61ae5af8392686416c9b8b9fe3c0986aa77c375b6d5232f2c9d654c975dd547995d8ea7115c845ea9e886",
+          "sha256": "6809af1c3d51c9d9aca0c6795ccb92952cfa2008b5dbaa79c69da8d5d54d4cc9",
+          "sha1": "775a7d509db5d4c80a73baeee278f35a7906440d",
+          "md5": "6d5a77fae206fd2a736c163b11625870"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "klibopenai-jvm-1.0.2-SNAPSHOT-sources.jar",
+          "url": "klibopenai-jvm-1.0.2-SNAPSHOT-sources.jar",
+          "size": 15702,
+          "sha512": "777f3409e20c7ea25e83ca69fea1aab1e0086467c01562f05af351b6a33ff6ab4b7d7754f26e9dc41b5bbdd65518720e91564a98fb4d75fcb19f37c07e0544e1",
+          "sha256": "56a0af6895e2abd6f9f8e8c6615ca9892377fa8f5931df0e23ba81c283a0da74",
+          "sha1": "351f46ae528619041e75934ccca7e7dd32611ac1",
+          "md5": "ed3113d0205f3bc3533971982d4559a7"
+        }
+      ]
+    }
+  ]
+}
