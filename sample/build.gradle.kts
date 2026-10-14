@@ -1,10 +1,6 @@
 plugins {
-  kotlin("jvm")
+  alias(libs.plugins.kotlin.jvm)
   application
-}
-
-kotlin {
-  jvmToolchain(11)
 }
 
 application {
@@ -13,18 +9,11 @@ application {
 
 dependencies {
   // Kotlin
-  implementation(KotlinX.coroutines.jdk9)
+  implementation(libs.kotlinx.coroutines.jdk9)
 
   // Logging
-  implementation("org.jraf.klibnanolog:klibnanolog:_")
+  implementation(libs.klibnanolog)
 
   // Library
   implementation(project(":klibopenai"))
-}
-
-// See https://github.com/BoD/k2o/pull/4
-configurations.named { it == "mainSourceElements" }.configureEach {
-  attributes {
-    attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage::class.java, "sources"))
-  }
 }
